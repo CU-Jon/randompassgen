@@ -1,0 +1,259 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e3f2fd; /* Modern light blue background */
+  color: #1a237e; /* Darker text for better contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header */
+#header {
+  text-align: center;
+  padding: 20px;
+  background-color: #1e88e5; /* Modern blue */
+  color: #fff;
+}
+
+#Logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.Logoimg {
+  max-width: 100px;
+  height: auto;
+}
+
+#LogoText {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Password Options */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px; /* Reduce negative margin for better spacing */
+  justify-content: center; /* Ensure child elements are centered */
+}
+
+.col-md-4, .col-md-6, .col-md-8, .col-md-12, .col-sm {
+  padding: 0 10px; /* Reduce padding for less space between columns */
+  flex: 1;
+  max-width: 95%; /* Increase the width of the container */
+  margin: 0 auto; /* Center the column itself */
+  text-align: center; /* Align text inside the column */
+}
+
+/* Ensure all checkbox labels are left-justified */
+.col-md-4 .checkbox_label {
+  text-align: left; /* Ensure all checkbox labels are left-justified */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .col-md-4, .col-md-6, .col-md-8, .col-md-12, .col-sm {
+    max-width: 100%; /* Full width on smaller screens */
+    padding: 0 10px; /* Reduce padding for mobile */
+  }
+  
+  /* Adjust password container for mobile */
+  .password-container {
+    width: 320px !important;
+    min-width: 320px !important;
+    max-width: 320px !important;
+  }
+  
+  .txt_password {
+    width: 280px !important;
+    min-width: 280px !important;
+    max-width: 280px !important;
+  }
+}
+
+.checkbox_label {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  gap: 10px; /* Ensure consistent spacing between checkbox and label */
+}
+
+/* Left-justify checkbox_value */
+.checkbox_value {
+  margin-left: 0; /* Remove auto margin */
+  text-align: left; /* Ensure left alignment */
+  padding-right: 15px !important; /* Ensure spacing to the right of the checkbox */
+}
+
+input[type="checkbox"] {
+  margin-right: 10px; /* Add spacing to the right of the checkbox */
+}
+
+.form-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+/* Password Generator */
+.password-container {
+  display: table-cell !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  width: 520px !important;
+  height: 250px !important;
+  padding: 10px !important;
+  box-sizing: border-box !important;
+  position: static !important;
+}
+
+/* Create an isolation wrapper for the password container */
+.password-container-wrapper {
+  width: 520px !important;
+  height: 250px !important;
+  display: table !important;
+  table-layout: fixed !important;
+  margin: 20px auto !important;
+  border-collapse: separate !important;
+  position: relative !important;
+}
+
+/* Override any Bootstrap or external styles that might interfere */
+.password-container,
+.password-container * {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  will-change: auto !important;
+}
+
+/* Force container stability - override any layout shifts */
+.password-container * {
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  position: static !important;
+}
+
+/* Ensure copy button doesn't affect container size */
+.password-container button {
+  width: auto !important;
+  min-width: auto !important;
+  max-width: none !important;
+  position: static !important;
+}
+
+.password-label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 100%; /* Ensure consistent width */
+}
+
+.txt_password {
+  width: 450px !important; /* Fixed width with important to override any conflicts */
+  min-width: 450px !important; /* Prevent shrinking */
+  max-width: 450px !important; /* Prevent growing */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  background-color: #ffffff !important; /* Set background to white */
+  color: #1a237e !important; /* Dark blue text for readability */
+  font-family: 'Courier New', monospace; /* Monospace font for password display */
+}
+
+.password-display {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.password-strength {
+  text-align: center;
+  font-size: 1rem;
+  color: #28a745;
+}
+
+/* Center Generate Button */
+.GenerateBtn {
+  display: block; /* Ensure it behaves as a block element */
+  margin: 20px auto; /* Center horizontally with spacing */
+  text-align: center; /* Align text inside the button */
+  width: auto; /* Remove fit-content to avoid alignment issues */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.GenerateBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Phonetic Helper */
+.Phoneticl, .Phoneticr {
+  padding: 15px; /* Increase padding for better spacing */
+  border: 1px solid #90caf9; /* Softer border color */
+  border-radius: 8px; /* Rounded corners for modern look */
+  background-color: #e3f2fd; /* Match global background */
+  color: #1a237e; /* Consistent text color */
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Info Section */
+.info-section {
+  background-color: #e9ecef;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* Keyboard Shortcuts */
+.info-section kbd {
+  background: #1565c0; /* Darker blue for better contrast */
+  color: #e3f2fd; /* Light blue text for readability */
+  border: 1px solid #0d47a1; /* Even darker border */
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+/* Footer */
+.footer-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #343a40;
+  color: #fff;
+}
+
+.footer-section a {
+  color: #28a745;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 100% !important; /* Default max-width for all screens */
+}
