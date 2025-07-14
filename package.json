@@ -1,0 +1,32 @@
+{
+  "name": "random-password-generator",
+  "version": "2.0.0",
+  "description": "A secure, client-side random password generator with no server dependencies",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "serve": "python -m http.server 8000",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "password",
+    "generator",
+    "security",
+    "random",
+    "client-side",
+    "static"
+  ],
+  "author": "randompassgen.com",
+  "license": "CC-BY-NC-4.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adamz01h/randompassgen.com"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
